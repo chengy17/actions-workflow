@@ -22,9 +22,10 @@ jobs:
         uses: actions/create-release@v1
         with:
           tag_name: ${{ steps.time.outputs.time }}
+          release_name: ${{ steps.time.outputs.time }}
           body_path: README.md
           # token: ${{ secrets.GITHUB_TOKEN }}
-          target_commitish: main
+          # target_commitish: main
           draft: false
           prerelease: true
     outputs:
